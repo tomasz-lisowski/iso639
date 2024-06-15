@@ -7081,7 +7081,7 @@ pub const Language = enum {
 
     const nameUtf8 = ret: {
         @setEvalBranchQuota(97994);
-        break :ret std.ComptimeStringMap(Language, .{
+        break :ret std.StaticStringMap(Language).initComptime(.{
             .{ "Ghotuo", .aaa },
             .{ "Alumu-Tesu", .aab },
             .{ "Ari", .aac },
